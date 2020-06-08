@@ -1,0 +1,2 @@
+1. Flask -> pip install Flask
+2. Bootstrap 4
