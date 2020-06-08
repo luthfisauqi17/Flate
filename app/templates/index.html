@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
+<h1>All notes</h1>
     {% for note in notes %}
-        <h3>{{ note. title }}</h3>
-        <p>{{ note.content }}</p>
+        <div class="card text-white bg-{{ note.type }} mb-3 ml-3 mr-3" style="max-width: 100%;">
+            <div class="card-header">{{ note.title }}</div>
+            <div class="card-body">
+            <!-- <h5 class="card-title">Primary card title</h5> -->
+            <p class="card-text">{{ note.content }}</p>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}
