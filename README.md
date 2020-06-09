@@ -1,4 +1,4 @@
-This is a note app created using Flask web framework
+Flate (Flask note) is a note app created using Flask web framework
 
 ### Requirements:
 1. Python 3
