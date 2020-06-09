@@ -21,7 +21,7 @@ def home():
 
 @app.route("/new")
 def new_note():
-    return render_template("new_note.html")
+    return render_template("new_note.html", title="New note")
 
 
 if __name__ == "__main__":

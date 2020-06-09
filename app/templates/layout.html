@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     {% if title %}
-      <title>Flate - {{ title }}</title>
+      <title>{{ title }} - Flate</title>
     {% else %}
       <title>Flate</title>
     {% endif %}
@@ -26,15 +26,15 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#"><img src="https://image.flaticon.com/icons/svg/2921/2921124.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="home"><img src="https://image.flaticon.com/icons/svg/2921/2921124.svg" width="30" height="30" class="d-inline-block align-top" alt="">
       Flate</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="#"><button type="button" class="btn btn-warning" style="color: white">All notes</button><span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link active" href="#"><button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> New note</button><span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="home"><button type="button" class="btn btn-warning" style="color: white"><i class="fa fa-bars"></i> All notes</button><span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="new"><button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> New note</button><span class="sr-only">(current)</span></a>
       </div>
     </div>
   </nav>
