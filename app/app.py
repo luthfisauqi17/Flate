@@ -34,6 +34,11 @@ def new_note():
         return redirect(url_for("home"))
     return render_template("new_note.html", title="New note")
 
+@app.route("/delete/<note_id>")
+def delete_note(note_id):
+    Note.query.filter_by(id=note_id).delete()
+    db.session.commit()
+    return redirect(url_for("home"))
 
 if __name__ == "__main__":
     app.run(debug=True)
