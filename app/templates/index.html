@@ -2,11 +2,12 @@
 {% block content %}
 <h1 class="ml-3 mt-3">All notes</h1>
     {% for note in notes %}
-        <div class="card text-white bg-{{ note.type }} mb-3 ml-3 mr-3" style="max-width: 100%;">
+        <div class="card text-white bg-{{ note.note_type }} mb-3 ml-3 mr-3" style="max-width: 100%;">
             <div class="card-header">{{ note.title }}</div>
             <div class="card-body">
             <!-- <h5 class="card-title">Primary card title</h5> -->
             <p class="card-text">{{ note.content }}</p>
+            <i class="float-right mt-3">Date created: {{ note.date_created }}</i>
             </div>
         </div>
     {% endfor %}
