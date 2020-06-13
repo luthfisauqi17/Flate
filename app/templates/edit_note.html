@@ -1,17 +1,16 @@
 {% extends "layout.html"%}
 {% block content %}
-    {% for note in edit_note %}
     <form action="" method="POST">
         <div class="card text-white bg-primary mt-3 mb-3 ml-3 mr-3" style="max-width: 100%;">
             <div class="card-header">Edit Note</div>
             <div class="card-body">
                 <label for="new-note-title">Title</label>
                 <div class="input-group mb-3">
-                    <input value="{{ note.title }}" name="new-note-title" id="new-note-title" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input value="{{ edit_note.title }}" name="new-note-title" id="new-note-title" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <label for="new-note-content">Content</label>
                 <div class="input-group mb-3">
-                    <textarea name="new-note-content" rows="15" id="new-note-content" class="form-control" aria-label="With textarea">{{ note.content }}</textarea>
+                    <textarea name="new-note-content" rows="15" id="new-note-content" class="form-control" aria-label="With textarea">{{ edit_note.content }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="new-note-type">Type</label>
@@ -28,5 +27,4 @@
         <a href="{{ url_for('home') }}"><button type="button" class="btn btn-danger float-left ml-3">Cancel</button></a>
         <button type="submit" class="btn btn-success float-right mr-3 mb-3">Edit note</button>
     </form>
-    {% endfor %}
 {% endblock %}

@@ -49,13 +49,13 @@ def edit_note(note_id):
         updated_note.note_type = request.form["new-note-type"]
         db.session.commit()
         return redirect(url_for("home"))
-    edit_note = Note.query.filter_by(id=note_id)
-    return render_template("edit_note.html", edit_note = edit_note)
+    edit_note = Note.query.filter_by(id=note_id).first()
+    return render_template("edit_note.html", edit_note = edit_note, title="Edit note - " + edit_note.title)
 
 @app.route("/view/<note_id>")
 def view_note(note_id):
-    view_note = Note.query.filter_by(id=note_id)
-    return render_template("view_note.html", view_note = view_note)
+    view_note = Note.query.filter_by(id=note_id).first()
+    return render_template("view_note.html", view_note = view_note, title=view_note.title)
 
 if __name__ == "__main__":
     app.run(debug=True)
