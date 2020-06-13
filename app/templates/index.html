@@ -5,11 +5,11 @@
     {% for note in notes %}
         
         {% if loop.index % 4 == 1 %}
-            <div class="row mb-3 ml-3 mr-3">
+            <div class="row ml-3 mr-3">
         {% endif %}
 
         <div class="col-sm">
-            <div class="card text-white bg-{{ note.note_type }}" style="max-width: 100%;">
+            <div class="card text-white bg-{{ note.note_type }} mb-3" style="max-width: 100%;">
                 <div class="card-header">{{ note.title }} <a style="color: white;" href="delete/{{ note.id }}"><i class="fa fa-trash-o float-right"></i></a></div>
                 <div class="card-body">
                     <!-- <h5 class="card-title">Primary card title</h5> -->
