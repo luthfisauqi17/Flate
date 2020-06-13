@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <a href="home"><button type="button" class="btn btn-danger float-left ml-3">Cancel</button></a>
+        <a href="{{ url_for('home') }}"><button type="button" class="btn btn-danger float-left ml-3">Cancel</button></a>
         <button type="submit" class="btn btn-success float-right mr-3 mb-3">Edit note</button>
     </form>
     {% endfor %}
