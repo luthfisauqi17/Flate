@@ -26,7 +26,7 @@ def home():
 def new_note():
     if request.method == "POST":
         new_note_title = request.form["new-note-title"]
-        new_note_content = request.form["new_note-content"]
+        new_note_content = request.form["new-note-content"]
         new_note_type = request.form["new-note-type"]
         new_note = Note(title=new_note_title, content=new_note_content, note_type=new_note_type)
         db.session.add(new_note)
@@ -39,6 +39,18 @@ def delete_note(note_id):
     Note.query.filter_by(id=note_id).delete()
     db.session.commit()
     return redirect(url_for("home"))
+
+@app.route("/edit/<note_id>", methods=['GET', 'POST'])
+def edit_note(note_id):
+    if request.method == "POST":
+        updated_note = Note.query.filter_by(id=note_id).first()
+        updated_note.title = request.form["new-note-title"]
+        updated_note.content = request.form["new-note-content"]
+        updated_note.note_type = request.form["new-note-type"]
+        db.session.commit()
+        return redirect(url_for("home"))
+    edit_note = Note.query.filter_by(id=note_id)
+    return render_template("edit_note.html", edit_note = edit_note)
 
 if __name__ == "__main__":
     app.run(debug=True)
