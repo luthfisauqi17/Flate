@@ -52,5 +52,10 @@ def edit_note(note_id):
     edit_note = Note.query.filter_by(id=note_id)
     return render_template("edit_note.html", edit_note = edit_note)
 
+@app.route("/view/<note_id>")
+def view_note(note_id):
+    view_note = Note.query.filter_by(id=note_id)
+    return render_template("view_note.html", view_note = view_note)
+
 if __name__ == "__main__":
     app.run(debug=True)
