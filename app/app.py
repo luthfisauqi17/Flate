@@ -26,8 +26,9 @@ class Note(db.Model):
 def home():
     if request.method == "POST":
         note_title = request.form["search-bar-input"]
-        notes = Note.query.filter_by(title = note_title).all()
-        return render_template("index.html", notes=notes, title="Search - " + note_title)
+        note_title_search = "%{}%".format(note_title)
+        notes = Note.query.filter(Note.title.like(note_title_search)).all()
+        return render_template("index.html", notes=notes, title="Search - " + note_title, search_box = note_title)
     notes = Note.query.all()
     return render_template("index.html", notes=notes, title="All notes")
 

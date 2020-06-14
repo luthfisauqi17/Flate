@@ -4,9 +4,13 @@
 
 <form action="" method="POST" class="form-inline justify-content-center align-items-center mb-3">
     <div class="form-group mx-sm-3 mb-2">
-    <label for="search-note" class="sr-only">Password</label>
+    <label for="search-note" class="sr-only">Search</label>
+    {% if title %}
+    <input value="{{ search_box }}" name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
+    {% else %}
     <input name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
-  </div>
+    {% endif %}
+</div>
   <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search mr-1"></i>Search note</button>
 </form>
 
