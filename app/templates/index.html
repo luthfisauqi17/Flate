@@ -2,6 +2,14 @@
 {% block content %}
 <h1 class="ml-3 mt-3">All notes</h1>
 
+<form action="" method="POST" class="form-inline justify-content-center align-items-center mb-3">
+    <div class="form-group mx-sm-3 mb-2">
+    <label for="search-note" class="sr-only">Password</label>
+    <input name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search mr-1"></i>Search note</button>
+</form>
+
     {% for note in notes %}
         
         {% if loop.index % 4 == 1 %}

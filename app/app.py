@@ -21,9 +21,13 @@ class Note(db.Model):
 
 # Routing
 # Home
-@app.route("/")
-@app.route("/home")
+@app.route("/", methods=['GET', 'POST'])
+@app.route("/home", methods=['GET', 'POST'])
 def home():
+    if request.method == "POST":
+        note_title = request.form["search-bar-input"]
+        notes = Note.query.filter_by(title = note_title).all()
+        return render_template("index.html", notes=notes, title="Search - " + note_title)
     notes = Note.query.all()
     return render_template("index.html", notes=notes, title="All notes")
 
