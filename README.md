@@ -19,7 +19,7 @@ Flate (Flask note) is a web application inpired by Google Keep application from 
 9. Visual Studio Code -> https://code.visualstudio.com/
 
 ### How to use Flate:
-1. Make sure that you have all the requirement
+1. Make sure that you have all the requirements
 2. Clone or download the project from the github. Open the terminal and type `git clone https://github.com/luthfisauqi17/Flate.git`
 3. Go project directory by typing `cd Flate`
 4. Activate the virtualenv by typing `. venv/bin/activate`
