@@ -14,7 +14,7 @@ class Note(db.Model):
     title = db.Column(db.String(255))
     content = db.Column(db.String(255))
     note_type = db.Column(db.String(60), nullable=False, default="primary")
-    date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date_created = db.Column(db.DateTime, nullable=False, default=datetime.now)
 
     def __repr__(self):
         return f"Note('{self.id}', '{self.title}', '{self.content}', '{self.note_type}', '{self.date_created}')"
