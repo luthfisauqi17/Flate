@@ -7,7 +7,7 @@ Flate (Flask note) is a web application inpired by Google Keep application from 
 4. User able to see the list of existing note
 5. User able to view a note in detail
 
-### Requirements:
+### Technologies used:
 1. Python 3 -> https://www.python.org/downloads/
 2. Virtualenv -> https://realpython.com/python-virtual-environments-a-primer/
 3. Flask -> https://flask.palletsprojects.com/en/1.1.x/
@@ -19,10 +19,10 @@ Flate (Flask note) is a web application inpired by Google Keep application from 
 9. Visual Studio Code -> https://code.visualstudio.com/
 
 ### How to use Flate:
-1. Make sure that you have all the requirements
-2. Clone or download the project from the github. Open the terminal and type `git clone https://github.com/luthfisauqi17/Flate.git`
-3. Go project directory by typing `cd Flate`
-4. Activate the virtualenv by typing `. venv/bin/activate`
-5. Go to app folder by typing `cd app`
-6. Run the application by typing `python3 app.py`
-7. Open web browser and type `http://127.0.0.1:5000/` or `http://localhost:5000/`
+1. Clone or download the project from the github. Open the terminal and type `git clone https://github.com/luthfisauqi17/Flate.git`
+2. Go project directory by typing `cd Flate`
+3. Activate the virtualenv by typing `. venv/bin/activate`
+4. Go to app folder by typing `cd app`
+5. Run the application by typing `python3 app.py`
+6. Open web browser and type `http://127.0.0.1:5000/` or `http://localhost:5000/`
+7. To exit the application, press `CTRL + c` on the terminal.
