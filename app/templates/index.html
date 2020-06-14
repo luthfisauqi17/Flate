@@ -1,11 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
+
+{% if search_box %}
+<h1 class="ml-3 mt-3">All notes / {{ search_box }}</h1>
+{% else %}
 <h1 class="ml-3 mt-3">All notes</h1>
+{% endif %}
+
 
 <form action="" method="POST" class="form-inline justify-content-center align-items-center mb-3">
     <div class="form-group mx-sm-3 mb-2">
     <label for="search-note" class="sr-only">Search</label>
-    {% if title %}
+    {% if search_box %}
     <input value="{{ search_box }}" name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
     {% else %}
     <input name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
