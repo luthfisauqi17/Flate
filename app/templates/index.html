@@ -2,9 +2,19 @@
 {% block content %}
 
 {% if search_box %}
-<h1 class="ml-3 mt-3">All notes / {{ search_box }}</h1>
+<h1 class="ml-3 mt-3">All notes / {{ search_box }} </h1>
+    {% if notes_count == 1 %}
+        <p class="ml-3">({{ notes_count }} note found)</p>
+    {% else %}
+        <p class="ml-3">({{ notes_count }} notes found)</p>
+    {% endif %}
 {% else %}
-<h1 class="ml-3 mt-3">All notes</h1>
+<h1 class="ml-3 mt-3">All notes </h1>
+    {% if notes_count == 1 %}
+        <p class="ml-3">({{ notes_count }} note found)</p>
+    {% else %}
+        <p class="ml-3">({{ notes_count }} notes found)</p>
+    {% endif %}
 {% endif %}
 
 

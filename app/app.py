@@ -1,6 +1,7 @@
 # Import
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import func
 from datetime import datetime
 
 # Configuration
@@ -28,9 +29,11 @@ def home():
         note_title = request.form["search-bar-input"]
         note_title_search = "%{}%".format(note_title)
         notes = Note.query.filter(Note.title.like(note_title_search)).all()
-        return render_template("index.html", notes=notes, title="Search - " + note_title, search_box = note_title)
+        notes_count = len(notes)
+        return render_template("index.html", notes=notes, title="Search - " + note_title, search_box = note_title, notes_count=notes_count)
     notes = Note.query.all()
-    return render_template("index.html", notes=notes, title="All notes")
+    notes_count = len(notes)
+    return render_template("index.html", notes=notes, title="All notes", notes_count=notes_count)
 
 # New note
 @app.route("/new", methods=['GET', 'POST'])
