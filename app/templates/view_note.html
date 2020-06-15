@@ -7,5 +7,5 @@
                 <i class="float-right mt-3">Date created: {{ view_note.date_created }}</i>
             </div>
         </div>
-        <a href="{{ url_for('home') }}"><button type="button" class="btn btn-danger float-left ml-3">Back</button></a>
+        <a href="{{ url_for('home') }}" data-toggle="tooltip" data-placement="bottom" title="Back to home"><button type="button" class="btn btn-danger float-left ml-3">Back</button></a>
 {% endblock %}
