@@ -6,6 +6,7 @@ Flate (Flask note) is a web application inpired by Google Keep application from 
 3. User able to delete a note
 4. User able to see the list of existing note
 5. User able to view a note in detail
+6. User able to use searchbar to search note
 
 ### Technologies used:
 1. Python 3 -> https://www.python.org/downloads/
