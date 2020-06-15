@@ -6,25 +6,25 @@
             <div class="card-body">
                 <label for="new-note-title">Title</label>
                 <div class="input-group mb-3">
-                    <input value="{{ edit_note.title }}" name="new-note-title" id="new-note-title" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                    <input value="{{ edit_note.title }}" name="new-note-title" id="new-note-title" type="text" class="form-control" data-toggle="tooltip" data-placement="bottom" title="Edit title" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <label for="new-note-content">Content</label>
                 <div class="input-group mb-3">
-                    <textarea name="new-note-content" rows="15" id="new-note-content" class="form-control" aria-label="With textarea">{{ edit_note.content }}</textarea>
+                    <textarea name="new-note-content" rows="15" id="new-note-content" class="form-control" data-toggle="tooltip" data-placement="bottom" title="Edit content" aria-label="With textarea">{{ edit_note.content }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="new-note-type">Type</label>
-                    <select name="new-note-type" class="form-control" id="new-note-type">
-                    <option value="primary">Primary</option>
-                    <option value="secondary">Secondary</option>
-                    <option value="success">Success</option>
-                    <option value="danger">Danger</option>
-                    <option value="warning">Warning</option>
+                    <select name="new-note-type" class="form-control" data-toggle="tooltip" data-placement="bottom" title="Edit note type" id="new-note-type">
+                        <option value="primary">Primary</option>
+                        <option value="secondary">Secondary</option>
+                        <option value="success">Success</option>
+                        <option value="danger">Danger</option>
+                        <option value="warning">Warning</option>
                     </select>
                 </div>
             </div>
         </div>
-        <a href="{{ url_for('home') }}"><button type="button" class="btn btn-danger float-left ml-3">Cancel</button></a>
-        <button type="submit" class="btn btn-success float-right mr-3 mb-3">Edit note</button>
+        <a href="{{ url_for('home') }}" data-toggle="tooltip" data-placement="bottom" title="Cancel edit"><button type="button" class="btn btn-danger float-left ml-3">Cancel</button></a>
+        <button type="submit" class="btn btn-success float-right mr-3 mb-3" data-toggle="tooltip" data-placement="bottom" title="Edit note">Edit note</button>
     </form>
 {% endblock %}

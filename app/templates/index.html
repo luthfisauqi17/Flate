@@ -20,14 +20,14 @@
 
 <form action="" method="POST" class="form-inline justify-content-center align-items-center mb-3">
     <div class="form-group mx-sm-3 mb-2">
-    <label for="search-note" class="sr-only">Search</label>
-    {% if search_box %}
-    <input value="{{ search_box }}" name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
-    {% else %}
-    <input name="search-bar-input" type="text" class="form-control" id="search-note" placeholder="Note title">
-    {% endif %}
-</div>
-  <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search mr-1"></i>Search note</button>
+        <label for="search-note" class="sr-only">Search</label>
+        {% if search_box %}
+            <input value="{{ search_box }}" name="search-bar-input" type="text" class="form-control" data-toggle="tooltip" data-placement="bottom" title="Search note" id="search-note" placeholder="Note title">
+        {% else %}
+            <input name="search-bar-input" type="text" class="form-control" data-toggle="tooltip" data-placement="bottom" title="Search note" id="search-note" placeholder="Note title">
+        {% endif %}
+    </div>
+  <button type="submit" class="btn btn-primary mb-2" data-toggle="tooltip" data-placement="bottom" title="Search note"><i class="fa fa-search mr-1"></i>Search note</button>
 </form>
 
     {% for note in notes %}
@@ -39,9 +39,9 @@
         <div class="col-sm">
             <div class="card text-white bg-{{ note.note_type }} mb-3" style="max-width: 100%;">
                 <div class="card-header">{{ note.title }} 
-                    <a class="text-white" href="delete/{{ note.id }}"><i class="fa fa-trash-o float-right"></i></a> 
-                    <a class="text-white" href="edit/{{ note.id }}"><i class="fa fa-edit float-right mr-1"></i></a>
-                    <a class="text-white" href="view/{{ note.id }}"><i class="fa fa-eye float-right mr-1"></i></a>
+                    <a class="text-white" data-toggle="tooltip" data-placement="bottom" title="Delete note" href="delete/{{ note.id }}"><i class="fa fa-trash-o float-right"></i></a> 
+                    <a class="text-white" data-toggle="tooltip" data-placement="bottom" title="Edit note" href="edit/{{ note.id }}"><i class="fa fa-edit float-right mr-1"></i></a>
+                    <a class="text-white" data-toggle="tooltip" data-placement="bottom" title="View note" href="view/{{ note.id }}"><i class="fa fa-eye float-right mr-1"></i></a>
                 </div>
                 <div class="card-body">
                     <!-- <h5 class="card-title">Primary card title</h5> -->
