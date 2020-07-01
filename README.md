@@ -32,9 +32,3 @@ Flate (Flask note) is a web application inpired by Google Keep application from 
 5. Run the application by typing `python3 app.py`
 6. Open web browser and type `http://127.0.0.1:5000/` or `http://localhost:5000/`
 7. To exit the application, press `CTRL + c` on the terminal.
-
-### Screenhots:
-![FlateScreenshot2](/screenshots/flate2.png)
-![FlateScreenshot3](/screenshots/flate3.png)
-![FlateScreenshot4](/screenshots/flate4.png)
-![FlateScreenshot5](/screenshots/flate5.png)
