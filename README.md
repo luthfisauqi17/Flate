@@ -2,7 +2,7 @@
 
 Flate (Flask note) is a web application inpired by Google Keep application from Google.
 
-### Overview
+### Overview:
 ![FlateScreenshot1](/screenshots/flate1.png)
 
 ### Features:
